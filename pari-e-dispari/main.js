@@ -19,20 +19,20 @@ function sum(v1, v2) {
     }
 }
 // Pari o dispari ?
-var userChoice = prompt("pari o dispari?");
+var userChoice = prompt("pari o dispari?").toLowerCase();
 // Verifica che l'utente abbia inserito le informazioni opportune
-if (userChoice == "pari" || userChoice == "dispari") {
-    console.log("L'utente ha scelto " + userChoice);
+if (userChoice == ("pari").toLowerCase() || userChoice == ("dispari").toLowerCase()) {
+    document.getElementById("scelta_utente").innerHTML = "L'utente ha scelto " + userChoice ;
     // L'utente inserisce un numero da 1 a 5
     var userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
     if (userNumber > 0 && userNumber < 6) {
         var randomized = randomizer();
-        console.log("L'utente ha digitato " + userNumber + " ,il computer ha estratto " + randomized + ". Il risultato è " + ((userNumber) + (randomized)));
+        document.getElementById("scelta_pc").innerHTML = "L'utente ha digitato " + userNumber + " ,il computer ha estratto " + randomized + ". Il risultato è " + ((userNumber) + (randomized));
         if (userChoice == sum(userNumber, randomized) ) {
-            console.log("L'utente ha vinto");
+            document.getElementById("somma").innerHTML = "L'utente ha vinto";
         }
         else {
-            console.log("L'utente ha perso");
+            document.getElementById("somma").innerHTML = "L'utente ha perso";
         }
     }
     else {
