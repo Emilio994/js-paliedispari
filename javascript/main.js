@@ -8,7 +8,7 @@ Dichiariamo chi ha vinto.*/
 
 // Funzione randomizer
 function randomizer(v) {
-    return v = (Math.random()*5+ 1).toFixed(0);
+    return v = parseInt((Math.random()*5+ 1).toFixed(0));
 }
 // Funzione pari o dispari
 function sum(v1, v2) {
@@ -28,7 +28,7 @@ if (userChoice == "pari" || userChoice == "dispari") {
     var userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
     if (userNumber > 0 && userNumber < 6) {
         var randomized = randomizer();
-        console.log("L'utente ha digitato " + userNumber + " ,il computer ha estratto " + randomized + ". Il risultato è " + (parseInt(userNumber) + parseInt(randomized)));
+        console.log("L'utente ha digitato " + userNumber + " ,il computer ha estratto " + randomized + ". Il risultato è " + ((userNumber) + (randomized)));
         if (userChoice == sum(userNumber, randomized) ) {
             console.log("L'utente ha vinto");
         }
