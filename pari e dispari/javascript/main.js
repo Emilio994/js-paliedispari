@@ -5,7 +5,6 @@ Sommiamo i due numeri
 Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
-
 // Funzione randomizer
 function randomizer(v) {
     return v = parseInt((Math.random()*5+ 1).toFixed(0));
