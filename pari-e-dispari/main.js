@@ -6,7 +6,7 @@ Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
 Dichiariamo chi ha vinto.*/
 
 // Funzione randomizer
-function randomizer(v) {
+function randomizer5(v) {
     return v = parseInt((Math.random()*5+ 1).toFixed(0));
 }
 // Funzione pari o dispari
@@ -21,13 +21,13 @@ function sum(v1, v2) {
 // Pari o dispari ?
 var userChoice = prompt("pari o dispari?").toLowerCase();
 // Verifica che l'utente abbia inserito le informazioni opportune
-if (userChoice == ("pari").toLowerCase() || userChoice == ("dispari").toLowerCase()) {
+if (userChoice == ("pari") || userChoice == ("dispari")) {
     document.getElementById("scelta_utente").innerHTML = "L'utente ha scelto " + userChoice ;
     // L'utente inserisce un numero da 1 a 5
     var userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
     if (userNumber > 0 && userNumber < 6) {
-        var randomized = randomizer();
-        document.getElementById("scelta_pc").innerHTML = "L'utente ha digitato " + userNumber + " ,il computer ha estratto " + randomized + ". Il risultato è " + ((userNumber) + (randomized));
+        var randomized = randomizer5();
+        document.getElementById("scelta_pc").innerHTML = "L'utente ha digitato " + userNumber + ", " + "il computer ha estratto " + randomized + ". " + "Il risultato è " + ((userNumber) + (randomized)) + ".";
         if (userChoice == sum(userNumber, randomized) ) {
             document.getElementById("somma").innerHTML = "L'utente ha vinto";
         }
