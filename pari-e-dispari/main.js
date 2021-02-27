@@ -19,7 +19,7 @@ function sum(v1, v2) {
     }
 }
 // Pari o dispari ?
-var userChoice = prompt("pari o dispari?").toLowerCase();
+var userChoice = prompt("Pari o dispari?").toLowerCase();
 // Verifica che l'utente abbia inserito le informazioni opportune
 if (userChoice == ("pari") || userChoice == ("dispari")) {
     document.getElementById("scelta_utente").innerHTML = "L'utente ha scelto " + userChoice ;
